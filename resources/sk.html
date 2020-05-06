@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="../theme/Master.css" rel="stylesheet" type="text/css">
+    <title>SIKOLING | DLHK Sidoarjo</title>
+    <script language="JavaScript">
+        function formatAngka(objek, separator) {
+            a = objek.value;
+            b = a.replace(/[^\d]/g, "");
+            c = "";
+            panjang = b.length;
+            j = 0;
+            for (i = panjang; i > 0; i--) {
+                j = j + 1;
+                if (((j % 3) == 1) && (j != 1)) {
+                    c = b.substr(i - 1, 1) + separator + c;
+                } else {
+                    c = b.substr(i - 1, 1) + c;
+                }
+            }
+            objek.value = c;
+        }
+    </script>
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../js/qrcode.js"></script>
+    <style>
+        @media screen {
+            .PrintOnly {
+                display: none
+            }
+        }
+        
+        @media print {
+            .ScreenOnly {
+                display: none
+            }
+        }
+        
+        .styleimg {
+            /* background: url(../data/ttd/35152_stamp.png no-repeat, url(../data/ttd/) no-repeat; */
+            background-size: 113pt;
+            background-position: 0px 3px, 105px 40px;
+        }
+    </style>
+    <link href="../images/logourl.gif" rel="SHORTCUT ICON"></link>
+    <script language="javascript" type="text/javascript">
+        var message = "";
+
+        function clickIE() {
+            if (document.all) {
+                (message);
+                return false;
+            }
+        }
+
+        function clickNS(e) {
+            if (document.layers || (document.getElementById && !document.all)) {
+                if (e.which == 2 || e.which == 3) {
+                    (message);
+                    return false;
+                }
+            }
+        }
+        if (document.layers) {
+            document.captureEvents(Event.MOUSEDOWN);
+            document.onmousedown = clickNS;
+        } else {
+            document.onmouseup = clickNS;
+            document.oncontextmenu = clickIE;
+        }
+        document.oncontextmenu = new Function("return false")
+    </script>
+</head>
+
+<body>
+    <form method="post" enctype="multipart/form-data" name="frm" target="content" id="frm">
+        <table width="650" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td valign="top">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+                            <td width="106" height="48" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Lampiran</font></td>
+                            <td width="21" align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td width="523" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Surat Rekomendasi Teknis Izin Pengelolaan Limbah Bahan Berbahaya dan <br/> Beracun (B3) untuk Kegiatan Penyimpanan Limbah Bahan Berbahaya dan <br />Beracun (B3) <></font></td>
+                        </tr>
+                        <tr>
+                            <td height="20"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Surat Nomor </font></td>
+                            <td align="center"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">S660/ /438.5.10/2018</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Tanggal</font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="5" style="border-bottom:3px double #000000;"></td>
+                            <td style="border-bottom:3px double #000000;"></td>
+                            <td style="border-bottom:3px double #000000;"></td>
+                        </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="27">&nbsp;</td>
+                            <td width="26">&nbsp;</td>
+                            <td width="23">&nbsp;</td>
+                            <td width="19">&nbsp;</td>
+                            <td width="185">&nbsp;</td>
+                            <td width="19">&nbsp;</td>
+                            <td width="27">&nbsp;</td>
+                            <td width="324">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td height="32" colspan="8" valign="top" style="text-align:center"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"><b>Persyaratan Teknis Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) untuk Kegiatan Penyimpanan Limbah Bahan Berbahaya dan Beracun (B3)</b></font></td>
+                        </tr>
+                        <tr>
+                            <td height="25">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td height="20" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">1.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Identitas Perusahaan:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="3" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Nama Usaha/Kegiatan </font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td colspan="2" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="3" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Bidang Usaha/Kegiatan </font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td colspan="2" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="32">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">c.</font></td>
+                            <td colspan="3"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Nama Penanggung jawab Usaha/ Kegiatan </font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td colspan="2" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">d.</font></td>
+                            <td colspan="3" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Jabatan </font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td colspan="2" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="32">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">e.</font></td>
+                            <td colspan="3" align="justify">
+                                <p><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Alamat Kantor Usaha / Kegiatan dan Telepon/Fax</font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td colspan="2" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="32">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">f.</font></td>
+                            <td colspan="3" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Alamat Lokasi Usaha / Kegiatan dan Telepon/Fax</font></td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">:</font></td>
+                            <td colspan="2" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">2.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Hasil verifikasi lapang adalah sebagai berikut :</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Jenis limbah B3 yang dihasilkan adalah :</font></td>
+                        </tr>
+                        <tr>
+                            <td height="96"></td>
+                            <td></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"><> dari kegiatannya.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Tempat penyimpanan limbah B3:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">TPS LB3 berupa bangunan dengan dimensi &lt;&gt; luas &lt;&gt; serta tinggi &lt;&gt; </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Titik koordinat adalah :</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">TPS LB3 : &lt;&gt; Lintang Selatan dan &lt;&gt; Bujur Timur &lt;&gt; </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Gambar teknis dan foto bangunan penyimpanan limbah B3 adalah sebagai berikut: </font></td>
+                        </tr>
+                        <tr>
+                            <td height="32">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="4" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Tampak Depan </font></td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Tampak Atas </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="5" align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Gambar teknis bangunan penyimpanan Limbah B3 </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="5"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Foto</font></td>
+                        </tr>
+                        <tr>
+                            <td height="32">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="4" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif"></font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="5" align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Foto bangunan penyimpanan Limbah B3</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">3.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Penanggung jawab Usaha/Kegiatan mempunyai kewajiban sebagai berikut:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melakukan pengurangan limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melakukan penyimpanan Limbah B3 sesuai dengan ketentuan sebagaimana dimaksud dalam Bab IV Peraturan Pemerintah Republik Indonesia Nomor 101 Tahun 2014 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">c.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melakukan pencatatan nama dan jumlah limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">d.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Apabila merencanakan melakukan pemanfaatan limbah B3, pengolahan limbah B3, dan/atau penimbunan limbah B3, agar menyerahkan kepada pengumpul limbah B3, pemanfaat limbah B3, pengolah limbah B3 dan/atau penimbun limbah B3 yang berizin;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">e.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Menyusun dan menyampaikan laporan penyimpanan limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">4.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Dalam melakukan penyimpanan limbah B3 sebagaimana point 3.b. diatas, kewajiban Penanggung Jawab Usaha/Kegiatan adalah sebagai berikut:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melakukan penyimpanan limbah B3 pada fasilitas bangunan penyimpanan limbah B3 yang berada di dalam penguasaan penanggung jawab usaha/kegiatan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Fasilitas penyimpanan limbah B3 sebagaimana dimaksud pada huruf a memiliki rancang bangun dengan kapasitas penyimpanan limbah B3  sesuai dengan jenis, jumlah dan karakteristik limbah B3 yang disimpan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">c.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Fasilitas penyimpanan sebagaimana dimaksud pada huruf b memiliki ketentuan:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Lantai bangunan penyimpanan harus kedap air, tidak bergelombang, kuat dan tidak retak;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Konstruksi lantai dibuat melandai turun ke arah bak penampungan dengan kemiringan maksimum 1% (satu persen) atau melokalisir lantai bangunan penyimpanan dengan tanggul;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Terlindung dari masuknya air hujan baik secara langsung maupun tidak langsung;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Memiliki sistem ventilasi udara yang memadai serta dilengkapi sarana untuk mencegah masuknya burung atau binatang lainnya ke dalam ruang penyimpanan;
+-	Memiliki sistem penerangan yang memadai;
+</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Pada bagian luar tempat penyimpanan diberi penandaan (simbol) sesuai dengan yang berlaku;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Dilengkapi papan nama yang dilengkapi dengan titik koordinat dan simbol limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Fasilitas penyimpanan limbah B3 dilengkapi dengan peralatan keselamatan dan kesehatan kerja serta peralatan penanggulangan keadaan darurat yang meliputi peralatan dan sistem pemadam kebakaran, fasilitas pertolongan pertama, prosedur instruksi kerja (standart operational procedure/SOP) penyimpanan limbah B3 dan prosedur instruksi kerja (SOP) tanggap darurat dan fasilitas tanggap darurat lainnya;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Menyerahkan limbah B3 yang dihasilkan kepada Pengumpul limbah B3, Pemanfaat limbah B3, Pengolah limbah B3, dan/atau Penimbun limbah B3 yang berizin;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melakukan penyimpanan limbah B3 paling lama:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="4" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">90 (sembilan puluh) hari sejak Limbah B3 dihasilkan, untuk Limbah B3 yang dihasilkan sebesar 50 kg (lima puluh kilogram) per hari atau lebih; </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="4" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">180 (seratus delapan puluh) hari sejak Limbah B3 dihasilkan, untuk Limbah B3 yang dihasilkan kurang dari 50 kg (lima puluh kilogram) per hari untuk Limbah B3 kategori 1; </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="4" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">365 (tiga ratus enam puluh lima) hari sejak Limbah B3 dihasilkan, untuk Limbah B3 yang dihasilkan kurang dari 50 kg (lima puluh kilogram) per hari untuk Limbah B3 kategori 2 dari sumber tidak spesifik dan sumber spesifik umum; atau </font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="4" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">365 (tiga ratus enam puluh lima) hari sejak Limbah B3 dihasilkan, untuk Limbah B3 kategori 2 dari sumber spesifik khusus.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melaksanakan prosedur Keselamatan dan Kesehatan Kerja (K3) sesuai dengan peraturan perundang-undangan yang berlaku.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">5.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Tata Cara Penyimpanan Limbah B3</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">menyimpan seluruh limbah B3 pada tempat penyimpanan yang telah ditentukan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Memperhatikan karakteristik limbah B3 yang disimpan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">c.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Melakukan pengemasan limbah B3 kecuali limbah B3 kategori 2 dari sumber spesifik khusus, dengan menggunakan kemasan yang:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Terbuat dari bahan yang dapat mengemas limbah B3 sesuai dengan karakteristik limbah B3 yang akan disimpan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Mampu mengungkung limbah B3 untuk tetap berada dalam kemasan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Memiliki penutup yang kuat untuk mencegah terjadinya tumpahan saat dilakukan penyimpanan, pemindahan, atau pengangkutan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Berada dalam kondisi baik, tidak bocor, tidak berkarat, atau tidak rusak;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Dilengkapi simbol dan label limbah B3 pada kemasan limbah B3 sesuai dengan karakteristik limbah B3 sebagaimana diatur dalam Peraturan Menteri Lingkungan Hidup Nomor 14 Tahun 2013 tentang Simbol dan Label Limbah Bahan Berbahaya dan Beracun.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">d.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Membuat sistem blok pada tempat penyimpanan, sehingga dapat dilakukan pemeriksaan secara menyeluruh dan jika terdapat kerusakan atau kecelakaan dapat segera ditangani;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">e.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Penumpukkan kemasan limbah B3 harus memperhatikan kestabilan tumpukan kemasan dengan setiap lapis tumpukan dialasi dengan palet;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">f.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Mencegah terjadinya ceceran dan tumpahan limbah B3 yang disimpan dan melakukan prosedur tata laksana rumah tangga yang baik (good house keeping);</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">g.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Mencatat setiap perpindahan limbah B3 dan mengisi neraca limbah B3 sesuai dengan format sebagaimana tercantum dalam Peraturan Bupati Sidoarjo Nomor 14 Tahun 2016 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun di Kabupaten Sidoarjo.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">6.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Pencatatan kegiatan Penyimpanan limbah B3 dilakukan dengan pencatatan secara terus menerus terhadap:</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Jenis limbah B3, jumlah, karakteristik limbah B3 dan waktu diterimanya limbah B3 dari sumber kegiatan yang menghasilkan limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Jenis limbah B3, jumlah, karakteristik limbah B3 dan waktu penyerahan limbah B3 kepada Pengangkut limbah B3 dan/atau Pengumpul limbah B3, Pemanfaat limbah B3, Pengolah limbah B3, dan/atau Penimbun limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">c.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Identitas Pengangkut limbah B3 dan/atau Pengumpul limbah B3, Pemanfaat limbah B3, Pengolah limbah B3, dan/atau Penimbun limbah B3.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">7.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Penyampaian laporan kegiatan penyimpanan limbah B3 setiap 3 (tiga) bulan kepada Bupati Sidoarjo melalui Kepala Dinas Lingkungan Hidup dan Kebersihan Kabupaten Sidoarjo dan ditembuskan kepada :</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Gubernur Provinsi Jawa Timur melalui Kepala Dinas Lingkungan Hidup Provinsi Jawa Timur;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia melalui Direktur Jenderal Pengelolaan Sampah, Limbah dan Bahan Beracun dan Berbahaya, dan paling sedikit memuat :</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">sumber, nama, jumlah dan karakteristik limbah B3;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">pelaksanaan penyimpanan limbah B3, dan;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td align="center" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">-</font></td>
+                            <td colspan="5" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">pemanfaatan limbah B3, pengolahan limbah B3, dan/atau penimbunan limbah B3 yang diserahkan kepada pengumpul limbah B3, pemanfaat limbah B3, pengolah limbah B3, dan/atau penimbun limbah B3.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">8.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Penanggung Jawab Usaha/Kegiatan dilarang :</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">a.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">melakukan pencampuran Limbah B3 yang disimpannya;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">b.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">menerima limbah dan menyimpan limbah B3 dari pihak atau sumber lain;</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20">&nbsp;</td>
+                            <td align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">c.</font></td>
+                            <td colspan="6" align="justify" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">melakukan pemanfaatan limbah B3, pengolahan limbah B3 dan/atau penimbunan limbah B3.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">9.</font></td>
+                            <td colspan="7" align="justify"><font size="2" color="#000000" face="Geneva, Arial, Helvetica, sans-serif">Segala kerugian yang ditimbulkan akibat dari kegiatan ini termasuk pencemaran dan/atau kerusakan lingkungan dan/atau terjadinya korban, maka sepenuhnya menjadi tanggung jawab pemegang rekomendasi.</font></td>
+                        </tr>
+                        <tr>
+                            <td height="25">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    <table width="100%" style="color:#000000" border="0" cellspacing="0" cellpadding="0">
+                        <!--DWLayoutTable-->
+                        <tr>
+                            <td width="267" height="1"></td>
+                            <td width="383"></td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top">
+                                <div id="qrcodeCanvas"></div>
+                                <script>
+                                    jQuery('#qrcodeCanvas').qrcode({
+                                        text: "1212",
+                                    });
+                                </script>
+                                <br>
+                                <br>
+                                <div><font style="font-size:8pt"><u><strong></strong></u></font>
+                                    <br>
+                                    <table style="font-size:9pt; color:#000000" border="0" cellpadding="0" cellspacing="0">
+                                        <!--DWLayoutTable-->
+                                        <tr valign="top">
+                                            <td height="15"></td>
+                                            <td width="41"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td height="15">
+                                                <!--DWLayoutEmptyCell-->&nbsp;</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td height="15">
+                                                <!--DWLayoutEmptyCell-->&nbsp;</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td height="15">
+                                                <!--DWLayoutEmptyCell-->&nbsp;</td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                            <td align="center" valign="top">
+                                <div class="styleimg" align="center">
+									KEPALA DINAS LINGKUNGAN HIDUP
+                                    <br/> DAN KEBERSIHAN
+									<br/> KABUPATEN SIDOARJO
+								</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
