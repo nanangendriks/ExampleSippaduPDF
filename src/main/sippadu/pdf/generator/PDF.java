@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
+import com.itextpdf.text.pdf.draw.LineSeparator;
 
 public class PDF {
 	private static String LogoSDA = "resources/logo.png";
@@ -24,7 +25,14 @@ public class PDF {
 			document.open();
 			addMetaData(document);
 			addSectionKop(document);
-			document.add(new Paragraph("\n\n"));
+			// add sparator
+			Paragraph p = new Paragraph();
+			LineSeparator line = new LineSeparator();
+	        line.setOffset(-1);
+	        p.add(line);
+	        p.add("\n");
+	        document.add(p);
+	        // end sparator
 			addSectionNomorSurat(document);
 			contentText(document);
 			addSectionTtd(document);
