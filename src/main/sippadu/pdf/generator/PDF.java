@@ -24,8 +24,9 @@ public class PDF {
 			document.open();
 			addMetaData(document);
 			addSectionKop(document);
+			document.add(new Paragraph("\n\n"));
 			addSectionNomorSurat(document);
-			addContent(document);
+			contentText(document);
 			addSectionTtd(document);
 			document.close();
 			Desktop.getDesktop().open(new File(FILE));
@@ -33,10 +34,62 @@ public class PDF {
 			e.printStackTrace();
 		}
 	}
-
+	
+	private static void contentText(Document document) throws DocumentException {
+		PdfPTable table = new PdfPTable(1);
+		table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		table.setWidthPercentage(92);
+		
+		PdfPTable table2 = new PdfPTable(1);
+		table2.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		table2.setWidthPercentage(82);
+		
+		
+		addContent(document, "Mendasari ;");
+		PdfPTable pp1, pp2, pp3, pp4;
+		pp1 = textFormater(document, "1. Surat Saudara tanggal <> Nomor <> perihal <> ;");
+		pp2 = textFormater(document, "2. Hasil verifikasi teknis di lapang oleh Tim Verifikasi Izin Penyimpanan Sementara Limbah B3 pada <>;");
+		pp3 = textFormater(document, "3. Surat Saudara tanggal <> Nomor <> perihal <> ;");
+		pp4 = textFormater(document, "4. Peraturan Bupati Sidoarjo Nomor 14 Tahun 2016 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun di Kabupaten Sidoarjo, maka bersama ini disampaikan bahwa :");
+		
+		PdfPTable p1, p2, p3, p4;
+		p1 = textFormater3(document, "a) Nama Perusahaan", "<>");
+		p2 = textFormater3(document, "b) Bidang Usaha", "<>");
+		p3 = textFormater3(document, "c) Lokasi", "<>");
+		p4 = textFormater3(document, "d) Telepon/Fax", "<>");
+		
+		
+		PdfPCell cell = new PdfPCell();
+		cell.setBorder(0); // remove border
+		cell.addElement(pp1);
+		cell.addElement(pp2);
+		cell.addElement(pp3);
+		cell.addElement(pp4);
+		
+		PdfPCell cell2 = new PdfPCell();
+		cell2.setBorder(0); // remove border
+		cell2.addElement(p1);
+		cell2.addElement(p2);
+		cell2.addElement(p3);
+		cell2.addElement(p4);
+		
+		
+		table.addCell(cell);
+		table2.addCell(cell2);
+		document.add(table);
+		addContent(document, " ");
+		document.add(table2);
+		addContent(document, " ");
+		
+		addContent(document, "Direkomendasikan untuk diberikan Izin Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) untuk Kegiatan Penyimpanan Limbah Bahan Berbahaya dan Beracun (B3) dengan mengacu pada persyaratan teknis sebagaimana terlampir. Persyaratan Teknis dimaksud merupakan ketentuan-ketentuan teknis yang harus dipatuhi dan merupakan satu kesatuan yang tidak terpisahkan dari rekomendasi teknis ini.");
+		addContent(document, "Apabila terjadi perubahan terhadap ketentuan-ketentuan teknis sebagaimana terlampir dan/atau ketentuan-ketentuan sebagaimana yang diatur dalam Peraturan Pemerintah Republik Indonesia Nomor 101 Tahun 2014 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun, Saudara wajib mengajukan perubahan Izin.");
+		addContent(document, "Rekomendasi Teknis ini bukan merupakan Izin Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) dan berlaku selama 90 (sembilan puluh) hari sejak tanggal diterbitkan untuk menjadi persyaratan pengajuan Izin Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) untuk Kegiatan Penyimpanan Limbah Bahan Berbahaya dan Beracun (B3) ke Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Kabupaten Sidoarjo.");
+		addContent(document, "Hal-hal lain yang belum tercantum dalam rekomendasi teknis ini agar dilaksanakan sesuai dengan peraturan perundang-undangan yang berlaku");
+		addContent(document, "Demikian untuk menjadikan perhatian pelaksanaannya.");
+	}
+	
 	private static void addMetaData(Document document) {
 		document.addTitle("My first PDF");
-		;
 		document.addSubject("Using iText");
 		document.addKeywords("Java, PDF, iText");
 		document.addAuthor("Lars Vogel");
@@ -67,12 +120,14 @@ public class PDF {
 
 		// pass paragraph to cell table
 		PdfPCell cell = new PdfPCell(p);
+		cell.setBorder(0); // remove border
 		// set the paragraph to align center & middle
 		cell.setHorizontalAlignment(Element.ALIGN_CENTER);
 		cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
 
 		// pass image to cell table
 		PdfPCell cell2 = new PdfPCell(image);
+		cell2.setBorder(0); // remove border
 		cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
 
 		// pass cell to the table
@@ -83,54 +138,103 @@ public class PDF {
 
 	private static void addSectionNomorSurat(Document document)
 			throws DocumentException, MalformedURLException, IOException {
+		// create table with ratio
 		PdfPTable table = new PdfPTable(new float[] { 3, 1 });
 		table.setWidthPercentage(100);
-
-		Paragraph p = new Paragraph();
-		p.setFont(smallFont);
-		p.add("Nomor : 660/ /438.5.10/2018 \n");
-		p.add("Sifat : Penting\n");
-		p.add("Lampiran : 1 (satu) berkas\n");
-		p.add("Perihal : Rekomendasi Teknis Izin Pengelolaan Limbah B3 untuk Kegiatan Penyimpanan Limbah B3\n");
-
-		Paragraph p2 = new Paragraph();
-		p2.setFont(smallFont);
-		p2.add("Sidoarjo, \n");
-		p2.add("Kepada: \n");
-		p2.add("Yth. Sdr\n\n\n");
-		p2.add("di\n");
-		p2.add(" Sidoarjo\n");
-
-		PdfPCell cell = new PdfPCell(p);
-		cell.setPaddingTop(30);
-
-		PdfPCell cell2 = new PdfPCell(p2);
+		
+		PdfPTable p1, p2, p3, p4;
+		p1 = textFormater3Nomor(document, "Nomor", "660/ /438.5.10/2018");
+		p2 = textFormater3Nomor(document, "Sifat", "Penting");
+		p3 = textFormater3Nomor(document, "Lampiran", "1 (satu) berkas");
+		p4 = textFormater3Nomor(document, "Perihal", "Rekomendasi Teknis Izin Pengelolaan Limbah B3 untuk Kegiatan Penyimpanan Limbah B3");
+		
+		
+		PdfPTable pp1, pp2, pp3, pp4, pp5;
+		pp1 = textFormater(document, "Sidoarjo");
+		pp2 = textFormater(document, "Kepada:");
+		pp3 = textFormater(document, "Yth. Sdr");
+		pp4 = textFormater(document, "di");
+		pp5 = textFormater(document, " Sidoarjo");
+	
+		PdfPCell cell = new PdfPCell();
+		cell.setBorder(0); // remove border
+		cell.addElement(p1);
+		cell.addElement(p2);
+		cell.addElement(p3);
+		cell.addElement(p4);
+		
+		PdfPCell cell2 = new PdfPCell();
+		cell2.setBorder(0); // remove border
+		cell2.addElement(pp1);
+		cell2.addElement(pp2);
+		cell2.addElement(pp3);
+		cell2.addElement(new Paragraph("\n"));
+		cell2.addElement(pp4);
+		cell2.addElement(pp5);
+		
 
 		table.addCell(cell);
 		table.addCell(cell2);
 		document.add(table);
 	}
-
-	private static void addContent(Document document) throws DocumentException {
-		// create table
+	
+	private static PdfPTable textFormater(Document document, String text) throws DocumentException {
 		PdfPTable table = new PdfPTable(1);
-		table.setWidthPercentage(90); // set width table
-		table.setPaddingTop(10);
-
+		table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		table.setWidthPercentage(100);
 		Paragraph p = new Paragraph();
-		p.setFirstLineIndent(20);
-		p.setAlignment(Element.ALIGN_JUSTIFIED);
 		p.setFont(smallFont);
-		p.add("Direkomendasikan untuk diberikan Izin Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) untuk Kegiatan Penyimpanan Limbah Bahan Berbahaya dan Beracun (B3) dengan mengacu pada persyaratan teknis sebagaimana terlampir. Persyaratan Teknis dimaksud merupakan ketentuan-ketentuan teknis yang harus dipatuhi dan merupakan satu kesatuan yang tidak terpisahkan dari rekomendasi teknis ini.\n\n");
-		p.add("Apabila terjadi perubahan terhadap ketentuan-ketentuan teknis sebagaimana terlampir dan/atau ketentuan-ketentuan sebagaimana yang diatur dalam Peraturan Pemerintah Republik Indonesia Nomor 101 Tahun 2014 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun, Saudara wajib mengajukan perubahan Izin.\n\n");
-		p.add("Rekomendasi Teknis ini bukan merupakan Izin Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) dan berlaku selama 90 (sembilan puluh) hari sejak tanggal diterbitkan untuk menjadi persyaratan pengajuan Izin Pengelolaan Limbah Bahan Berbahaya dan Beracun (B3) untuk Kegiatan Penyimpanan Limbah Bahan Berbahaya dan Beracun (B3) ke Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Kabupaten Sidoarjo.\n\n");
-		p.add("Hal-hal lain yang belum tercantum dalam rekomendasi teknis ini agar dilaksanakan sesuai dengan peraturan perundang-undangan yang berlaku.\n\n");
-		p.add("Demikian untuk menjadikan perhatian pelaksanaannya.\n\n");
+		p.add(text+"\n");
+		table.addCell(p);
+		return table;
+	}
+	
+	private static PdfPTable textFormater3(Document document, String text1, String text2) throws DocumentException {
+		PdfPTable table = new PdfPTable(new float[] { 40, 3, 58 });
+		table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		table.setWidthPercentage(100);
+		Paragraph p = new Paragraph();
+		p.setFont(smallFont);
+		p.add(text1);
+		
+		Paragraph p2 = new Paragraph();
+		p2.setFont(smallFont);
+		p2.add(text2);
+		table.addCell(p);
+		table.addCell(":");
+		table.addCell(p2);
+		return table;
+	}
+	
+	private static PdfPTable textFormater3Nomor(Document document, String text1, String text2) throws DocumentException {
+		PdfPTable table = new PdfPTable(new float[] { 20, 3, 78 });
+		table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		table.setWidthPercentage(100);
+		Paragraph p = new Paragraph();
+		p.setFont(smallFont);
+		p.add(text1);
+		
+		Paragraph p2 = new Paragraph();
+		p2.setFont(smallFont);
+		p2.add(text2);
+		table.addCell(p);
+		table.addCell(":");
+		table.addCell(p2);
+		return table;
+	}
 
-		PdfPCell cell2 = new PdfPCell(p);
-		table.addCell(cell2);
-		document.add(table);
-
+	private static void addContent(Document document, String text) throws DocumentException {
+		Paragraph p = new Paragraph();
+		p.setPaddingTop(30);
+		p.setAlignment(Element.ALIGN_JUSTIFIED);
+		p.setSpacingAfter(0);
+		p.setFont(smallFont);
+		p.setFirstLineIndent(30); // set indent
+		p.setIndentationLeft(20);
+		p.setIndentationRight(20);
+		p.add(text);
+		p.add("\n\n");
+		document.add(p);
 	}
 
 	private static void addSectionTtd(Document document) throws DocumentException, MalformedURLException, IOException {
@@ -148,6 +252,7 @@ public class PDF {
 
 		// pass qrcode image to cell table
 		PdfPCell cellQRCode = new PdfPCell(codeQrImage);
+		cellQRCode.setBorder(0); // remove border
 
 		Paragraph note = new Paragraph();
 		note.setFont(xsFont);
@@ -158,6 +263,7 @@ public class PDF {
 
 		// pass paragraph to table cell
 		PdfPCell cellNote = new PdfPCell(note);
+		cellNote.setBorder(0); // remove border
 
 		// pass cell to table
 		table2.addCell(cellQRCode);
@@ -165,10 +271,12 @@ public class PDF {
 
 		// left cell table
 		PdfPCell cellLeft = new PdfPCell(table2);
+		cellLeft.setBorder(0); // remove border
 
 		Paragraph p2 = new Paragraph();
 		p2.setFont(smallFont);
-		p2.add("KEPALA DINAS LINGKUNGAN HIDUP\n");
+		p2.setAlignment(Element.ALIGN_CENTER);
+		p2.add("KEPALA DINAS LINGKUNGAN HIDUP\n");// set align to center
 		p2.add("DAN KEBERSIHAN\n");
 		p2.add("KABUPATEN SIDOARJO\n");
 
@@ -177,31 +285,23 @@ public class PDF {
 		// image stamp
 		Image imageStamp = Image.getInstance(Stampel);
 
-		// table right
-		PdfPTable table3 = new PdfPTable(1);
-
 		// pass paragraph to table cell
-		PdfPCell cell2 = new PdfPCell(p2);
-		cell2.setHorizontalAlignment(Element.ALIGN_CENTER); // set align to center
-
-		// pass cell to table right
-		table3.addCell(cell2);
+		PdfPCell cellRight = new PdfPCell();
+		cellRight.addElement(p2);
+		cellRight.setBorder(0); // remove border
 
 		Paragraph pNew = new Paragraph();
 		imageStamp.scalePercent(10); // scale image stamp
 		imageTtd.scalePercent(20); // scale image signature
 
 		// set to horizontal with chunk
-		pNew.add(new Chunk(imageStamp, 0, 0, true));
+		pNew.add(new Chunk(imageStamp, 60, 0, true)); // value 60 set the X position
 		pNew.add(new Chunk(imageTtd, 0, 0, true));
 
-		PdfPCell cell = new PdfPCell();
-		cell.addElement(pNew);
-
-		table3.addCell(cell);
+		cellRight.addElement(pNew);
 
 		table.addCell(cellLeft);
-		table.addCell(table3);
+		table.addCell(cellRight);
 		document.add(table);
 	}
 
