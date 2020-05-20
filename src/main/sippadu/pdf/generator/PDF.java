@@ -55,10 +55,10 @@ public class PDF {
 		
 		addContent(document, "Mendasari ;");
 		PdfPTable pp1, pp2, pp3, pp4;
-		pp1 = textFormater(document, "1. Surat Saudara tanggal <> Nomor <> perihal <> ;");
-		pp2 = textFormater(document, "2. Hasil verifikasi teknis di lapang oleh Tim Verifikasi Izin Penyimpanan Sementara Limbah B3 pada <>;");
-		pp3 = textFormater(document, "3. Surat Saudara tanggal <> Nomor <> perihal <> ;");
-		pp4 = textFormater(document, "4. Peraturan Bupati Sidoarjo Nomor 14 Tahun 2016 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun di Kabupaten Sidoarjo, maka bersama ini disampaikan bahwa :");
+		pp1 = textFormater2(document, "1. ","Surat Saudara tanggal <> Nomor <> perihal <> ;");
+		pp2 = textFormater2(document, "2. ","Hasil verifikasi teknis di lapang oleh Tim Verifikasi Izin Penyimpanan Sementara Limbah B3 pada <>;");
+		pp3 = textFormater2(document, "3. ","Surat Saudara tanggal <> Nomor <> perihal <> ;");
+		pp4 = textFormater2(document, "4. ","Peraturan Bupati Sidoarjo Nomor 14 Tahun 2016 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun di Kabupaten Sidoarjo, maka bersama ini disampaikan bahwa :");
 		
 		PdfPTable p1, p2, p3, p4;
 		p1 = textFormater3(document, "a) Nama Perusahaan", "<>");
@@ -196,7 +196,21 @@ public class PDF {
 		table.addCell(p);
 		return table;
 	}
-	
+	private static PdfPTable textFormater2(Document document, String text1, String text2) throws DocumentException {
+		PdfPTable table = new PdfPTable(new float[] { 5, 95 });
+		table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		table.setWidthPercentage(100);
+		Paragraph p = new Paragraph();
+		p.setFont(smallFont);
+		p.add(text1);
+		
+		Paragraph p2 = new Paragraph();
+		p2.setFont(smallFont);
+		p2.add(text2);
+		table.addCell(p);
+		table.addCell(p2);
+		return table;
+	}
 	private static PdfPTable textFormater3(Document document, String text1, String text2) throws DocumentException {
 		PdfPTable table = new PdfPTable(new float[] { 40, 3, 58 });
 		table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
